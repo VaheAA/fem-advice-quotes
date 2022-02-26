@@ -15,9 +15,7 @@ import QuoteContainer from './components/QuoteContainer.vue';
 body {
   background-color: $darkGrayishBlue;
 }
-#app {
-  height: 100%;
-}
+
 main {
   display: flex;
   flex-direction: column;
