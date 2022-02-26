@@ -1,7 +1,9 @@
 <template>
-  <div class="container">
-    <QuoteContainer />
-  </div>
+  <main>
+    <div class="container">
+      <QuoteContainer />
+    </div>
+  </main>
 </template>
 
 <script setup>
@@ -15,13 +17,15 @@ body {
 #app {
   height: 100%;
 }
-.container {
-  max-width: 540px;
-  margin: 0 auto;
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+.container {
+  max-width: 540px;
+  margin: 0 auto;
 }
 </style>

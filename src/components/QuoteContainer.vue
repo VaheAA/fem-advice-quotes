@@ -2,7 +2,7 @@
   <div class="quote">
     <transition name="fade">
       <div class="quote__content" v-if="quote">
-        <span class="quote__number">Advice # {{ quote.id }}</span>
+        <h1 class="quote__number">Advice # {{ quote.id }}</h1>
         <blockquote class="quote__text">"{{ quote.advice }}"</blockquote>
       </div>
     </transition>
@@ -20,7 +20,7 @@
       />
     </div>
     <div class="quote__button">
-      <button class="btn" @click="getRandomAdvice">
+      <button class="btn" @click="getRandomAdvice" aria-label="Get New Advice">
         <img src="../assets/images/icon-dice.svg" alt="" />
       </button>
     </div>
@@ -35,7 +35,9 @@ const isLoading = ref(false);
 
 const getRandomAdvice = async () => {
   isLoading.value = true;
-  const response = await fetch('https://api.adviceslip.com/advice');
+  const response = await fetch('https://api.adviceslip.com/advice', {
+    cache: 'no-cache'
+  });
   const data = await response.json();
   quote.value = data.slip;
   isLoading.value = false;
