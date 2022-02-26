@@ -33,12 +33,15 @@ import { onMounted, ref } from 'vue';
 const quote = ref(null);
 
 const getRandomAdvice = async () => {
-  isLoading.value = true;
-  const response = await fetch('https://api.adviceslip.com/advice', {
-    cache: 'no-cache'
-  });
-  const data = await response.json();
-  quote.value = data.slip;
+  try {
+    const response = await fetch('https://api.adviceslip.com/advice', {
+      cache: 'no-cache'
+    });
+    const data = await response.json();
+    quote.value = data.slip;
+  } catch (err) {
+    alert(err.message);
+  }
 };
 
 onMounted(async () => {
