@@ -1,7 +1,9 @@
 <template>
-  <div class="container">
-    <QuoteContainer />
-  </div>
+  <main>
+    <div class="container">
+      <QuoteContainer />
+    </div>
+  </main>
 </template>
 
 <script setup>
