@@ -2,7 +2,7 @@
   <div class="quote">
     <transition name="fade">
       <div class="quote__content" v-if="quote">
-        <h1 class="quote__number">Advice # {{ quote.id }}</h1>
+        <span class="quote__number">Advice # {{ quote.id }}</span>
         <blockquote class="quote__text">"{{ quote.advice }}"</blockquote>
       </div>
     </transition>
