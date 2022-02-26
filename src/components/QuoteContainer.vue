@@ -31,7 +31,6 @@
 import { onMounted, ref } from 'vue';
 
 const quote = ref(null);
-const isLoading = ref(false);
 
 const getRandomAdvice = async () => {
   isLoading.value = true;
@@ -40,7 +39,6 @@ const getRandomAdvice = async () => {
   });
   const data = await response.json();
   quote.value = data.slip;
-  isLoading.value = false;
 };
 
 onMounted(async () => {
