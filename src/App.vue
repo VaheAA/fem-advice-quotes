@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1 class="main-title">Your Best Adviser</h1>
+    <h1 class="main-title">Your Best Advisor</h1>
     <div class="container">
       <QuoteContainer />
     </div>
@@ -26,9 +26,9 @@ main {
   height: 100%;
 }
 .main-title {
-  padding-bottom: 25px;
+  padding-bottom: 36px;
   font-size: 48px;
-  color: $neoGreen;
+  color: $neonGreen;
 }
 .container {
   max-width: 540px;
