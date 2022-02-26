@@ -1,5 +1,6 @@
 <template>
   <main>
+    <h1 class="main-title">Your Best Adviser</h1>
     <div class="container">
       <QuoteContainer />
     </div>
@@ -23,6 +24,11 @@ main {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+.main-title {
+  padding-bottom: 25px;
+  font-size: 48px;
+  color: $neoGreen;
 }
 .container {
   max-width: 540px;
